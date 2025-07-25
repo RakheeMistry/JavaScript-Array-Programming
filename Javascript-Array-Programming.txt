@@ -1,0 +1,110 @@
+// Write a program to check whether the array's first and last element is equal to 10 or not
+function arrEleCheck(arr){
+    if(arr[0] == 10 && arr[arr.length-1] == 10){
+        console.log(`Array first and last element is equal to 10`);
+    }
+    else{
+        console.log(`Array first and last element is not equal to 10`);
+    }
+}
+arrEleCheck([5,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to check whether the array's first and last element is equal or not
+function arrEleEqual(arr){
+    if(arr[0] == arr[arr.length-1]){
+        console.log(`Array first and last element is equal`);
+    }
+    else{
+        console.log(`Array first and last element is not equal`);
+    }
+}
+arrEleEqual([6,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to check whether the array length is even or odd
+function arrLengthEven(arr){
+    if((arr.length)%2 == 0){
+        console.log(`Array length is even`);
+    }
+    else{
+        console.log(`Array length is odd`);
+    }
+}
+arrLengthEven([5,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to display array in reverse order using forEach loop
+function arrReverse(arr){
+    console.log(arr);
+    let newArr = [];
+    arr.reverse().forEach((el) => {
+        newArr.push(el);
+    })
+    console.log(newArr);
+}
+arrReverse([5,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to sum all elements of array
+function arrSum(arr){
+    let sum = 0;
+    for(let i of arr){
+        sum += i;
+    }
+    console.log(sum);
+}
+arrSum([5,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to display array element which are greater than average of all elements
+function arrAvgGre(arr){
+    let avg;
+    let sum = 0;
+    let result = [];
+    for(let i of arr){
+        sum += i;
+    }
+    avg = sum/arr.length;
+    arr.forEach((el) => {
+        if(el > avg){
+            result.push(el);
+        }
+    })
+    console.log(result);
+}
+arrAvgGre([9,8,4,2,6,1]);
+console.log('----------------------');  
+
+// Write a program to increase the value of each element by 2 of an array
+function arrInc(arr){
+    console.log(arr);
+    let result = arr.map((el)=> { return el+2 });
+    console.log(result);
+}
+arrInc([5,2,7,4,1,9,6]);
+console.log('----------------------');
+
+// Write a program to swap first and last element of an array
+function arrEleSwap(arr){
+    console.log(arr);
+    let temp;
+    temp = arr[0];
+    arr[0] = arr[arr.length - 1];
+    arr[arr.length - 1] = temp;
+    console.log(arr);
+}
+arrEleSwap([3,8,1,9,2]);
+console.log('----------------------');
+
+// Write a program to calculate sum of even elements of an array 
+function arrSumEven(arr){
+    let sum = 0;
+    for(let i of arr){
+        if(i % 2 == 0){
+            sum += i;
+        }
+    }
+    console.log(sum);
+}
+arrSumEven([5,2,7,3,4,6]);
