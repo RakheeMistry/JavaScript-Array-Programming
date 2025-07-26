@@ -30,6 +30,48 @@ let arr = [4,9,1,6,2,0];
 console.log(arr.length);
 console.log('----------------------');
 
+// Write a program to display how many ways we can print array element
+function arrEleAccess(arr){
+    //First approach
+    for(let i of arr){
+        console.log(i);
+    }
+    console.log('-----------------');
+    
+    //Second approach
+    arr.forEach(el => console.log(el));
+    console.log('-----------------');
+    
+    //Third approach
+    for(let i=0; i<arr.length; i++){
+        console.log(arr[i]);
+    }
+    console.log('-----------------');
+    
+    //Fourth approach
+    arr.map(el => console.log(el));
+    console.log('-----------------');
+    
+    //Fifth approach
+    arr.filter(el => console.log(el));
+    console.log('-----------------');
+}
+arrEleAccess([23,67,90,71]);
+console.log('-----------------');
+
+// Write a program to display first element of array
+function arrEleFirstAccess(arr){
+    console.log(arr[0]);
+}
+arrEleFirstAccess([23,67,90,71]);
+console.log('-----------------');
+
+// Write a program to display last element of array
+function arrEleLastAccess(arr){
+    console.log(arr[arr.length-1]);
+}
+arrEleLastAccess([23,67,90,71]);
+
 // Write a program to check whether the element is empty or not if array not empty then print the elements
 function checkArrLength(arr){
     if(arr.length > 0){
