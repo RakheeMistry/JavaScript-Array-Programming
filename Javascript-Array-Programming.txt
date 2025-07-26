@@ -341,4 +341,34 @@ function arrInput(n){
 arrInput(5);
 console.log('-------------------');
 
+// Write a program to find the smallest element of the array
+function arrEleSmall(arr){
+    let small = arr[0];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]<small){
+            small = arr[i];
+        }
+    }
+    console.log(small);
+}
+arrEleSmall([34,89,12,1,6,0]);
+console.log('-------------------');
+
+// Write a program to square each element of the array
+function arrEleSquare(arr){
+    console.log(arr);
+    let newArr = arr.map((el)=>{return el*el});
+    console.log(newArr);
+}
+arrEleSquare([2,4,6,8]);
+console.log('-------------------');
+
+// Write a program of multiplication of table of any number in an array
+function arrEleMulTable(size,n){
+    for(let i=1; i<=size; i++){
+        console.log(`${n} X ${i} = ${n*i}`);
+    }
+}
+arrEleMulTable(10,5);
+console.log('-------------------');
 
