@@ -372,3 +372,74 @@ function arrEleMulTable(size,n){
 arrEleMulTable(10,5);
 console.log('-------------------');
 
+// Write a program to find prime number from an array
+function isPrime(n){
+    if(n < 2){
+        return false;
+    }
+    if(n == 2){
+        return true;
+    }
+    if(n%2 == 0){
+        return false;
+    }
+    for(let i=3; i<Math.sqrt(n); i+=2){
+        if(n % i === 0){
+            return false;
+        }
+    }
+    return true;
+}
+function arrElePrime(arr){
+   let primeNumbers = arr.filter(isPrime);
+   console.log(primeNumbers);
+}
+arrElePrime([3,6,7,1,2]);
+console.log('-----------------------');
+
+// Write a program to check the specified element is a duplicate or not in an array
+function duplicateEleArr(arr,ele){
+    let newArr = arr.filter((item,index,self) => { return self.indexOf(item) !== index });
+    if(ele === newArr){
+        console.log(`${ele} is duplicate`);
+    }
+    else{
+        console.log(`${ele} is not duplicate`);
+    }
+}
+duplicateEleArr([5,8,1,5,7],7);
+console.log('-----------------------');
+
+// Write a program to swap an element to the specified location of an array
+function swapEleArr(arr,loc,ele){
+    console.log(arr);
+    for(let i=0; i<=arr.length; i++){
+        if(i == loc){
+           arr[i] = ele; 
+        }
+    }
+    console.log(arr);
+}
+swapEleArr([6,0,1,5,2],3,23);
+console.log('-----------------------');
+
+// Write a program to find perfect number from an array
+function isPerfect(arr){
+    for(let n of arr){
+    let sum = 0;
+    for(let i=1; i < n; i++){
+        if(n%i == 0){
+            sum += i;
+        }
+    }
+    console.log(sum);
+    if(sum == n){
+        console.log(`${n} is a Perfect Number`);
+    }
+    else{
+        console.log(`${n} is not a Perfect Number`);
+    }
+  }
+}
+isPerfect([6,45,28]);
+console.log('--------------------------');
