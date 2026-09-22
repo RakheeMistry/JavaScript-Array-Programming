@@ -11,3 +11,8 @@ console.log(result2); // Output: 4
 const arrWithEmptySlots = [1, , 3, , 5];
 const result3 = arrWithEmptySlots.find(element => element === undefined);   
 console.log(result3); // Output: undefined
+
+// Rule 4: Handle NaN values in the array
+const arrWithNaN = [1, 2, NaN, 4, 5];
+const result4 = arrWithNaN.find(element => Number.isNaN(element));
+console.log(result4); // Output: NaN
